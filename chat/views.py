@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import View
 from rest_framework import generics
 
 from chat.models import Message
@@ -19,3 +20,4 @@ class MessagesListView(generics.ListAPIView):
 class MessageByIdView(generics.RetrieveAPIView):
     serializer_class = MessagesListSerializer
     queryset = Message.objects.all()
+

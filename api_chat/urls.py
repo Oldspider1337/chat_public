@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from chat.views import StartView
 from .yasg import urlpatterns as doc_urls
 
 urlpatterns = [

@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '9zajl)9z-zcb@m_6a6ld*15#-47us9_#)#0m#$5b#zpbw*guq)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['aqueous-river-52916.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['aqueous-river-52916.herokuapp.com', '127.0.0.1', '0.0.0.0']
 
 # Application definition
 
@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 # REST_FRAMEWORK = {
@@ -84,20 +85,19 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'api-chat',
+        'NAME': 'd3vtht81fhem4t',
 
-        'USER': 'postgres',
+        'USER': 'vqaidixfnppbqu',
 
-        'PASSWORD': 'root',
+        'PASSWORD': 'b7861149c4fda799a56f87b8bc03d892c7dc225e6b8e62f3005f5823785fa555',
 
-        'HOST': 'localhost',
+        'HOST': 'ec2-52-21-153-207.compute-1.amazonaws.com',
 
         'PORT': '5432',
 
     }
 
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
